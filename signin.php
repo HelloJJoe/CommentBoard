@@ -18,9 +18,9 @@
         $session_row = $session_result->fetch_assoc();
     
         setcookie("session_id", $session_row['id'], time()+3600*24);
-        header ('location: /joe/index.html');
+        header ('location: ./index.html');
     }else{
-        header ('location: /joe/index.html') ;
+        header ('location: ./index.html') ;
     }
     
     $sql->close();
