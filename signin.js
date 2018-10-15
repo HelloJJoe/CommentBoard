@@ -8,7 +8,7 @@ $(document).ready(function(){
             	var item = 
             		`
             		<li class="nav-item">
-                		<a class="nav-link" href="/joe/logout.php">Sign Out</a>
+                		<a class="nav-link" href="/logout.php">Sign Out</a>
             		</li>
             		`
                 $.ajax({
@@ -29,16 +29,16 @@ $(document).ready(function(){
         		var item =
         			`
         			<li class="nav-item">
-                        <a class="nav-link" href="/joe/signin.html">Sign In</a>
+                        <a class="nav-link" href="/signin.html">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/joe/Join.html">Join</a>
+                        <a class="nav-link" href="/Join.html">Join</a>
                     </li>
                     `
 
                 $('.form_block').prepend(
                     `
-                    <div class='cookieisnotset'><a href='/joe/signin.html'>Sign In</a></div>
+                    <div class='cookieisnotset'><a href='/signin.html'>Sign In</a></div>
                     `
                     )
 
