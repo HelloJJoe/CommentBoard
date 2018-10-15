@@ -35,7 +35,7 @@ $(document).ready(function(){
                                     <h3>Reply</h3>
                                     <div class='form_block'>
 
-                                        <form action='/joe/insert_comm.php' method='POST'>
+                                        <form action='./insert_comm.php' method='POST'>
                                             <div class='nn'>${nickname}</div><br>              
                                             <textarea name='content' placeholder='Comment here'></textarea>
                                             <input name='parent_id' value='${res.id}' type='hidden' />

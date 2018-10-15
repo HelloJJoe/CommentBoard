@@ -37,7 +37,7 @@ $(document).ready(function(){
 							`									
 							<h3>Reply</h3>
 							<div class='form_block'>
-								 <form action='/joe/insert_comm.php' method='POST'>
+								 <form action='./insert_comm.php' method='POST'>
 						            <div class='nn'>${res.nickname}</div>
 						            <br>              
 						            <textarea name='content' placeholder='Comment here'></textarea>
