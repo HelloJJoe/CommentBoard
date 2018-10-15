@@ -6,22 +6,14 @@
     $last_id = $conn->insert_id;
     $conn->close();
 
-  
-/*
-    if ($conn->query($sql)){
-        header ('Location: /joe/index.php');
-    }
-    else{
-        echo 'error : ' . $conn->error;
-    }
-*/
-    if ($_POST['parent_id'] === '0')
-    {
+
+    if ($_POST['parent_id'] === '0'){
         $arr = array('result' => 'success', 'id' => $last_id);
         echo json_encode($arr); 
     }
-    else
-        header ('Location: /joe/index.php');
-  
+    else{
+        header('Location:./index.html');
+    }
+
 ?> 
 

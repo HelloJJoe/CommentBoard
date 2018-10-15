@@ -13,7 +13,12 @@
         $page = intval($_GET["page"]);                           
     }
 
-    $start = ($page-1)*10;                            
+    $start = ($page-1)*10; 
+
+    $arr = array('page' => $page);
+    echo json_encode($arr);
+
+    $conn->close();                         
 ?>  
 
 

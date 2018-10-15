@@ -22,11 +22,11 @@
         echo $session_sql;
         
             setcookie("session_id", $session_id, time()+3600*24);
-            header ('location: /joe/index.php');
+            header ('location: /joe/index.html');
         
     }
     else{
-        header ('location: /joe/index.php');
+        header ('location: /joe/index.html');
     }
     
 ?>

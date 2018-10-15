@@ -2,6 +2,6 @@
     require('connection.php');
 
     setcookie('session_id', '');
-    header ('location: /joe/index.php' );
+    header ('location: /joe/index.html' );
 ?>
 
