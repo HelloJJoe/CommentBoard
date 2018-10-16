@@ -1,8 +1,14 @@
 
 $(document).ready(function(){
+	var urlParams = new URLSearchParams(window.location.search);
+	var page = urlParams.get('page')
+
 	$.ajax({
-		type: 'GET',
+		type: 'POST',
 		url: 'comment.php',
+		data:{
+			page: page,
+		},
 		success: function(resp) {
 		  	var res = JSON.parse(resp)
 	
