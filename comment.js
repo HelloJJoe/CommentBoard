@@ -16,16 +16,14 @@ $(document).ready(function(){
 					},
 					success: function(sub_resp){
 						var sub_res = JSON.parse(sub_resp)
-
 							for (var j = 0; j < sub_res.length; j++){
 								appendSubComment(sub_res[j]);
-							}
-											
+							}				
 					}
 				});
-			
-		
-				$.ajax({
+
+
+	            $.ajax({
 					type: 'POST',
 					url: 'nickname.php',
 					data:{
@@ -33,25 +31,30 @@ $(document).ready(function(){
 					},
 					success: function(resp){
 						var res = JSON.parse(resp)
-						var item = 
-							`									
-							<h3>Reply</h3>
-							<div class='form_block'>
-								 <form action='./insert_comm.php' method='POST'>
-						            <div class='nn'>${res.nickname}</div>
-						            <br>              
-						            <textarea name='content' placeholder='Comment here'></textarea>
-						            <input name='parent_id' value='${res.parent_id}' type='hidden' />
-						            <input name='user_id' value='${res.user_id}' type='hidden' />
-						            <button type="submit" class="btn btn-primary">Submit</button>                  
-								</form>
-							</div>
-							`
-						$(`.reply_block[name=${res.parent_id}]`).append(item)
+						if (res.result = 'success'){
+							var item = 
+								`									
+								<h3>Reply</h3>
+								<div class='form_block'>
+									 <form action='./insert_comm.php' method='POST'>
+							            <div class='nn'>${res.nickname}</div>
+							            <br>              
+							            <textarea name='content' placeholder='Comment here'></textarea>
+							            <input name='parent_id' value='${res.parent_id}' type='hidden' />
+							            <input name='user_id' value='${res.user_id}' type='hidden' />
+							            <button type="submit" class="btn btn-primary">Submit</button>                  
+									</form>
+								</div>
+								`
+							$(`.reply_block[name=${res.parent_id}]`).append(item)
+						}
 					}
-
 				})
-				}
+						
+			        
+			    
+				
+			}
 			
 		},
 	  
