@@ -1,5 +1,5 @@
 <?php
-    require('connection.php');
+    require('CommentBoard/connection.php');
 
     $username = $_POST['username'];
     $passward = password_hash($_POST['passward'], PASSWORD_BCRYPT);
@@ -22,11 +22,11 @@
         echo $session_sql;
         
             setcookie("session_id", $session_id, time()+3600*24);
-            header ('location: ./index.html');
+            header ('location: CommentBoard/index.html');
         
     }
     else{
-        header ('location: ./index.html');
+        header ('location: CommentBoard/index.html');
     }
     
 ?>

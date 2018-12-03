@@ -1,6 +1,6 @@
 <?php
 
-    require_once('connection.php');
+    require_once('CommentBoard/connection.php');
 
     $is_login = '';
     if (isset($_COOKIE['session_id']) && !empty($_COOKIE['session_id'])){

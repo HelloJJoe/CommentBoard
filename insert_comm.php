@@ -1,5 +1,5 @@
 <?php
-    require('connection.php');
+    require('CommentBoard/connection.php');
 
     $sql = " INSERT INTO comments (parent_id, user_id, content) VALUES ('" .  addslashes( $_POST['parent_id'] ) . "', '" . addslashes( $_POST['user_id'] ) . "', '" . addslashes( $_POST['content'] ) . "')";
     $conn->query($sql);
@@ -12,7 +12,7 @@
         echo json_encode($arr); 
     }
     else{
-        header('Location:./index.html');
+        header('Location:CommentBoard/index.html');
     }
 
 ?> 

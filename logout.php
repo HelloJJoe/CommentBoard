@@ -1,7 +1,7 @@
 <?php
-    require('connection.php');
+    require('CommentBoard/connection.php');
 
     setcookie('session_id', '');
-    header ('location: ./index.html' );
+    header ('location: CommentBoard/index.html' );
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-    require('connection.php');
+    require('CommentBoard/connection.php');
     
     //先撈使用者密碼出來還原，
     $username = $_POST['username'];
@@ -18,9 +18,9 @@
         $session_row = $session_result->fetch_assoc();
     
         setcookie("session_id", $session_row['id'], time()+3600*24);
-        header ('location: ./index.html');
+        header ('location: CommentBoard/index.html');
     }else{
-        header ('location: ./index.html') ;
+        header ('location: CommentBoard/index.html') ;
     }
     
     $sql->close();
