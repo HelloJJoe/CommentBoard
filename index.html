@@ -4,15 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>CommenBoard</title>
-        <link rel="stylesheet" type="text/css" href="CommentBoard/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-        <script src='CommentBoard/js/ajax.js'></script> 
-        <script src='CommentBoard/js/comment.js'></script>
-        <script src='CommentBoard/js/signin.js'></script>
-        <script src="CommentBoard/js/page1.js"></script>
+        <script src='ajax.js'></script> 
+        <script src='comment.js'></script>
+        <script src='signin.js'></script>
+        <script src="page1.js"></script>
     </head>
   
     <body>               
@@ -36,7 +36,7 @@
                 <div class="jumbotron">
                     <h1 class="display-3">Comment Board</h1>
                     <div class='form_block'>              
-                        <form action='CommentBoard/insert_comm.php' method='POST'> 
+                        <form action='./insert_comm.php' method='POST'> 
                             <div class='nn'></div>            
                             <textarea name='content' placeholder='Comment here'></textarea>
                             <input name='parent_id' value='0' type='hidden'/>

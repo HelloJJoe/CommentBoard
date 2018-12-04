@@ -1,5 +1,5 @@
 <?php   
-    require('CommentBoard/connection.php');
+    require('connection.php');
 
      $sub_sql = "SELECT comments.id, users.user_id, comments.parent_id, users.nickname, comments.content, comments.created_at from users, comments WHERE users.user_id = comments.user_id AND parent_id =" . $_POST['parent_id'] . " ORDER BY created_at ASC";
     

@@ -1,5 +1,5 @@
  <?
-    require_once('CommentBoard/connection.php');
+    require_once('connection.php');
 
     if (!isset($_COOKIE['session_id'])){
     	$nn_results = array('result' => 'false');

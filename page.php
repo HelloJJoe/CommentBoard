@@ -1,5 +1,5 @@
 <?php
-    require_once('CommentBoard/connection.php');
+    require_once('connection.php');
 
     $page_sql = 'SELECT COUNT(id) FROM comments where parent_id=0'; 
     $page_result = $conn->query($page_sql);                      
